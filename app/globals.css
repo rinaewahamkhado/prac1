@@ -25,53 +25,49 @@ body {
     )
     rgb(var(--background-start-rgb));
 
-  /* Add animation properties for the circles */
-  animation-name: moveCircles;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  position: relative;
+  overflow: hidden; /* Ensure the circles don't overflow the body */
 }
 
-/* Define keyframes for the circle animation */
-@keyframes moveCircles {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Style for the circles */
+/* Define the circles */
 .circle {
   position: absolute;
   width: 20px;
   height: 20px;
   background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
   border-radius: 50%;
+  animation: moveCircles 3s linear infinite; /* Apply animation to all circles */
 }
 
-/* Define different circles with different animation delays */
+/* Define different circles with different positions */
 .circle1 {
   top: 10%;
   left: 20%;
-  animation-delay: 0s;
+  animation-delay: 0s; /* Delay the animation for this circle */
 }
 
 .circle2 {
   top: 20%;
   left: 50%;
-  animation-delay: 0.5s;
+  animation-delay: 1s; /* Delay the animation for this circle */
 }
 
 .circle3 {
   top: 30%;
   left: 80%;
-  animation-delay: 1s;
+  animation-delay: 2s; /* Delay the animation for this circle */
 }
 
-/* You can add more circles and adjust their positions as needed */
+/* Keyframes for moving circles */
+@keyframes moveCircles {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the movement distance */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
