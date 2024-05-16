@@ -53,29 +53,28 @@ body {
 .circle1::before {
   top: 10%;
   left: 20%;
-  animation-delay: 0s; /* Delay the animation for this circle */
+  animation-delay: 10s; /* Delay the animation for this circle */
 }
 
 .circle2::before {
   top: 20%;
   left: 50%;
-  animation-delay: 1s; /* Delay the animation for this circle */
+  animation-delay: 0s; /* Delay the animation for this circle */
 }
 
 .circle3::before {
-  top: 30%;
+  top: 50%;
   left: 80%;
-  animation-delay: 2s; /* Delay the animation for this circle */
+  animation-delay: 5s; /* Delay the animation for this circle */
 }
 
-/* Keyframes for moving circles */
-/* Add bouncing effect to the circles */
+
 @keyframes moveCircles {
   0% {
-    transform: translate(0, 0);
+    transform: translate(10, 10);
   }
   50% {
-    transform: translate(50px, 50px); /* Adjust the bouncing distance */
+    transform: translate(50px, 800px); /* Adjust the bouncing distance */
   }
   100% {
     transform: translate(0, 0);
