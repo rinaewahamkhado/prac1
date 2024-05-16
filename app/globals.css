@@ -24,11 +24,54 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  /* Add animation properties for the circles */
+  animation-name: moveCircles;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-    
+/* Define keyframes for the circle animation */
+@keyframes moveCircles {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
+
+/* Style for the circles */
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  border-radius: 50%;
+}
+
+/* Define different circles with different animation delays */
+.circle1 {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  top: 20%;
+  left: 50%;
+  animation-delay: 0.5s;
+}
+
+.circle3 {
+  top: 30%;
+  left: 80%;
+  animation-delay: 1s;
+}
+
+/* You can add more circles and adjust their positions as needed */
+
